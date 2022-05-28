@@ -8,26 +8,121 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Checkpoint-3</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">Checkpoint-3</span>
-      </a>
-    </nav>
+  <header class="container-fluid">
+    <div class="row bg-secondary text-light no-select">
+      <div class="col-6">
+        <nav class="navbar navbar-dark navbar-expand ">
+          <a class="navbar-brand ms-3" href="#">
+            <h2><span class="ms-2"><i class="mdi mdi-airplane"></i> WayFinder</span><span class="text-end"></span></h2>
+          </a>
+        </nav>
+      </div>
+      <div class="col-6 text-end">
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#form-modal" type="button">Book</button>
+      </div>
+    </div>
+
+    </div>
+
   </header>
-  <main>
+  <main class="container-fluid bg-dark">
+
+
+
+    <!-- Vacation Form  -->
+    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+      aria-hidden="true">
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="form-body">
+            <!-- form part -->
+            <div class="row d-flex justify-content-center p-5">
+              <div class="">
+                <form action="" onsubmit="app.flightsController.createFlight()">
+                  <div class=" text-center">
+                    <h3>New Vacation</h3>
+                    <h5>Name of vacation</h5>
+                    <div class="p-3">
+                      <input type="text" name="flight" id="flight" class="form-control" placeholder="Title...">
+                    </div>
+                    <div class="p-3">
+                      <span><button class="btn btn-success">Create</button></span> <span><button class="btn btn-danger"
+                          data-bs-dismiss="modal" aria-label="Close">Cancel</button></span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Vacation Form -->
+
+
+    <div class="row p-4" id="flights">
+      <div class="col-12 card bg-white shadow">
+        <div class="row p-2 ">
+          <div class="col-12 text-center p-2"><h3>Las Vegas</h3></div>
+          <div class="col-2">Type</div>
+          <div class="col-2">Name</div>
+          <div class="col-2">Confirmation Number</div>
+          <div class="col-2">Address</div>
+          <div class="col-2">Date</div>
+          <div class="col-2">Cost</div>
+        </div>
+        <div class="row list-space p-2">
+          <div class="col-12">
+            <div class="row p-2 bg-secondary">
+              <div class="col-2">Type</div>
+              <div class="col-2">Name</div>
+              <div class="col-2">Confirmation Number</div>
+              <div class="col-2">Address</div>
+              <div class="col-2">Date</div>
+              <div class="col-2">Cost</div>
+            </div>
+          </div>
+        </div>
+        <form class="" action="" onsubmit="">
+        <div class="row p-2 border-top border-dark border-2">
+            <div class="col-2"> <select name="type" id="type">
+              <option value="">Flight</option>
+              <option value="">Car</option>
+              <option value="">Hotel</option>
+            </select></div>
+            <div class="col-2"><input type="text"></div>
+            <div class="col-2"><input type="text"></div>
+            <div class="col-2"><input type="text"></div>
+            <div class="col-2"><input type="date"></div>
+            <div class="col-2"><input type="number"></div>
+          </form>
+          <div class="col-12 text-end"><button class="btn btn-success">Add</button></div>
+          <div class="col-4">
+            <div>Notes</div>
+            <textarea name="" id="" cols="40" rows="2"></textarea>
+          </div>
+          <div class="col-12 d-flex justify-content-between"><span><button class="btn btn-danger">Delete</button></span><span>Total</span></div>
+        </div>
+      </div>
+    </div>
+
+  
+
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <div id="app"></div>
+          <div id=""></div>
         </div>
       </div>
     </div>
