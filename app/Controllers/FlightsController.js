@@ -7,6 +7,7 @@ function _drawFlights(){
     let template = ''
     flights.forEach(f => template += f.Template)
     document.getElementById('flights').innerHTML = template
+
        
 
 }
@@ -17,7 +18,8 @@ export class FlightsController{
     constructor(){
        console.log('irking');
        ProxyState.on('flights', _drawFlights)
-        _drawFlights
+       ProxyState.on('lists', _drawFlights)
+        _drawFlights()
 
     }
 
