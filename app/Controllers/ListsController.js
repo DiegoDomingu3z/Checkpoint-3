@@ -1,25 +1,32 @@
+import { ProxyState } from "../AppState.js";
 import { listsService } from "../Services/ListsService.js"
 
-function _drawList(){
-    
-}
+
 
 
 
 
 export class ListsController{
     constructor(){
-        console.log('list controller is working');
+        console.log('list controller is working,', ProxyState.lists);
+
 
     }
 
 
-    addList(listId){
+
+    addList(flightId){
         window.event.preventDefault()
-        console.log('is lists loading');
+        console.log('is lists loading', flightId);
         let form = window.event.target
         let listData = {
-            
+            flightId: flightId,
+            type: form.type.value,
+            name: form.name.value,
+            confirmation: form.confirmation.value,
+            address: form.address.value,
+            date: form.date.value,
+            cost: form.cost.value
         }
         listsService.addList(listData)
     }

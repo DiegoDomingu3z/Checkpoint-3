@@ -6,14 +6,13 @@ class AppState extends EventEmitter {
   // /** @type {import('./Models/Value').Value[]} */
   values = []
 
-
+/** @type {import('./Models/Flights').Flight[]} */
   flights = [
     
   ]
+/** @type {import('./Models/Lists').List[]} */
 
-  lists = [
-    
-  ]
+  lists = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
