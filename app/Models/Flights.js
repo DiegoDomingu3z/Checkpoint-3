@@ -8,7 +8,7 @@ export class Flight{
     constructor(flightData){
         this.id = flightData.id || generateId()
         this.flight = flightData.flight
-        this.note = flightData.note
+        this.note = flightData.note || ''
     }
 
 
@@ -48,8 +48,8 @@ export class Flight{
               <div class="col-2"><input required name="date" id="date" type="date""></div>
               <div class="col-2"><input required min="10" name="cost" id="cost" type="number" placeholder="Cost"></div>
            
-            <div class="col-12 text-end p-4"><button class="btn btn-success"><i class="mdi mdi-plus-circle"></i></button></div>
-            </form>
+              </form>
+              <div class="col-12 text-end p-4"><button class="btn btn-success"><i class="mdi mdi-plus-circle"></i></button></div>
             <div class="col-4">
               <div class="info">Notes</div>
               <textarea onblur="app.flightsController.updateFlight('${this.id}')" class=" fs-b" name="note" id="note" cols="40" rows="2">${this.note}</textarea>

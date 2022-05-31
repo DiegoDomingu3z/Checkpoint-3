@@ -1,7 +1,7 @@
 /* BASIC STYLES HERE */
 
 .list-space{
-    height: 15rem;
+    min-height: 15rem;
 }
 
 .headers{
