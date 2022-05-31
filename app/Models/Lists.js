@@ -14,7 +14,7 @@ export class Lists{
         this.name = listData.name
         this.confirmation = listData.confirmation
         this.address = listData.address
-        this.date = listData.date
+        this.date = new Date(listData.date)
         this.cost = listData.cost
     }
 
@@ -23,13 +23,13 @@ export class Lists{
 
         return `
         <div class="col-12">
-        <div class="row p-2 bg-secondary">
+        <div class="row p-2 bg-secondary rounded reservations">
           <div class="col-2">${this.type}</div>
           <div class="col-2">${this.name}</div>
           <div class="col-2">${this.confirmation}</div>
           <div class="col-2">${this.address}</div>
-          <div class="col-2">${this.date}</div>
-          <div class="col-2">${this.cost}</div>
+          <div class="col-2">${this.date.toDateString()}</div>
+          <div class="col-2">$${this.cost}  <i class="mdi mdi-trash-can-outline selectable px-3" onclick="app.listsController.deleteList('${this.id}')"></i> </div>
         </div>
       </div>
       

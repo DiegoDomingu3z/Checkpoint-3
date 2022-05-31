@@ -11,6 +11,11 @@ import { Lists } from "../Models/Lists.js"
         ProxyState.lists = [...ProxyState.lists, new Lists(listData)]
      }
 
+     deleteList(id){
+        console.log('list is being deleted', id);
+        ProxyState.lists = ProxyState.lists.filter( l => l.id != id)
+     }
+
 }
 
 

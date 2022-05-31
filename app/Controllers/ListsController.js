@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { listsService } from "../Services/ListsService.js"
-
+import { Pop } from "../Utils/Pop.js";
 
 
 
@@ -29,6 +29,13 @@ export class ListsController{
             cost: form.cost.value
         }
         listsService.addList(listData)
+    }
+
+     async deleteList(id){
+         if(await Pop.confirm('Are you sure you want to delete this Reservation')){
+
+             listsService.deleteList(id)
+            }
     }
     
 }

@@ -16,6 +16,13 @@ class FlightService{
         flight.note = newText
         ProxyState.flights = ProxyState.flights
     }
+
+
+    deleteFlight(id){
+        console.log('deleting this', id);
+        ProxyState.flights = ProxyState.flights.filter( f => f.id != id)
+    }
+
    
 }
 

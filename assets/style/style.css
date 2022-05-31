@@ -3,3 +3,21 @@
 .list-space{
     height: 15rem;
 }
+
+.headers{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.info{
+    font-family: 'Bebas Neue', cursive;
+    font-size: large;
+}
+
+.reservations:hover{
+    transform: scale(1.01);
+  }
+
+.notes{
+    font-family: 'Indie Flower', cursive;
+    
+}
